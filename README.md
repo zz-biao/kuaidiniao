@@ -1,6 +1,6 @@
 # kuaidiniao
 ###快递鸟api接口封装 面单/及时查询/物流跟踪
-
+'''
 
 $kuaidi = new \Kuaidiniao('appid', 'appkey');
    $eorder = [
@@ -35,3 +35,4 @@ $result = $kuaidi->eorder($eorder, $sender, $receiver, $commodity);  //下单
 $eorder['LogisticCode'] = 123456789;   //物流跟踪需要上面的数据和快递单号
 $result = $kuaidi->track($eorder, $sender, $receiver, $commodity); //物流跟踪
 $result = $kuaidi->timelyQuery('SF', 789134737040); //及时查询
+'''
