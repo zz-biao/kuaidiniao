@@ -137,8 +137,8 @@ class Kuaidiniao{
         curl_setopt($ch, CURLOPT_POSTFIELDS, $datas);
         $response = curl_exec($ch);
         if(curl_errno($ch)){
-            // 显示报错信息；终止继续执行
-            die(curl_error($ch));
+            // 抛出报错信息
+            throw new Exception(curl_error($ch));
         }
         curl_close($ch);
         return $response;
